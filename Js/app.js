@@ -18,8 +18,8 @@ const  seattle = {
   getcookies : function(){
     for (let i=0 ; i<hours.length ; i++) {
       
-     this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
-
+     this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc));
+     this.total +=(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
     }
   },
   render : function(){
@@ -37,6 +37,9 @@ const  seattle = {
 
 
    }
+   const totali=document.createElement('li');
+   totali.textContent=` The total  ${this.total} cookies`;
+   ulElement.appendChild(totali)
   },
 
 
@@ -53,7 +56,7 @@ const  Tokyo = {
     for (let i=0 ; i<hours.length ; i++) {
       
      this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
-
+     this.total +=(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
     }
   },
   render : function(){
@@ -71,6 +74,9 @@ const  Tokyo = {
 
 
    }
+   const totali=document.createElement('li');
+   totali.textContent=` The total  ${this.total} cookies`;
+   ulElement.appendChild(totali)
   },
 
 
@@ -87,7 +93,7 @@ const  Dubai = {
     for (let i=0 ; i<hours.length ; i++) {
       
      this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
-
+     this.total +=(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
     }
   },
   render : function(){
@@ -105,6 +111,9 @@ const  Dubai = {
 
 
    }
+   const totali=document.createElement('li');
+   totali.textContent=` The total  ${this.total} cookies`;
+   ulElement.appendChild(totali)
   },
 
 
@@ -121,7 +130,7 @@ const  Paris = {
     for (let i=0 ; i<hours.length ; i++) {
       
      this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
-
+     this.total +=(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
     }
   },
   render : function(){
@@ -139,6 +148,9 @@ const  Paris = {
 
 
    }
+   const totali=document.createElement('li');
+   totali.textContent=` The total  ${this.total} cookies`;
+   ulElement.appendChild(totali)
   },
 
 
@@ -155,7 +167,7 @@ const  Lima = {
     for (let i=0 ; i<hours.length ; i++) {
       
      this.cookiessale.push(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
-
+     this.total +=(Math.ceil(randomnum(this.minCustomers,this.maxCustomers)*this.avgspc))
     }
   },
   render : function(){
@@ -173,6 +185,9 @@ const  Lima = {
 
 
    }
+   const totali=document.createElement('li');
+   totali.textContent=` The total  ${this.total} cookies`;
+   ulElement.appendChild(totali)
   },
 
 
