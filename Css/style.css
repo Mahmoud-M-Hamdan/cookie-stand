@@ -1,2 +1,14 @@
 
 th,tr,td{border: solid black 3px;width: 40px;height: 35px;text-align: center;background-color: rgb(43, 226, 217); }
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+    
