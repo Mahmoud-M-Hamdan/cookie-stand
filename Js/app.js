@@ -229,6 +229,9 @@ function randomnum(min,max){
 
 let hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 const shop = document.getElementById('shop');
+let cookiesform=document.getElementById('cookiesform')
+
+
 let all=[]
 function cookie (local, minCustomers, maxCustomers, avgspc,) {
   this.local =local,
@@ -247,8 +250,24 @@ cookie.prototype.getAge = function(){
   }
 }
 
+cookiesform.addEventListener('submit',submithandler)
 
+    function submithandler(event){
+      event.preventDefault();
 
+    let locations=event.target.locations.value;
+    let MinHour=Number( event.target.MinHour.value);
+    let MaxHour=Number(event.target.MaxHour.value);
+    let AvgCookiesCustomer=Number(event.target.AvgCookiesCustomer.value);
+
+     let newLoc= new cookie (locations,MinHour,MaxHour,AvgCookiesCustomer)
+    
+    newLoc.getAge();
+    newLoc.render();
+    console.log(newLoc);
+    tableFooter()
+  }
+  
 
 cookie.prototype.render = function(){
 
@@ -278,7 +297,7 @@ function tableHeader(){
   let trEl = document.createElement('tr');
   shop.appendChild(trEl)
 
-hours.unshift('');
+hours.unshift('location');
 hours.push('Daily Total');
 
   for(var i = 0; i < hours.length; i++){
@@ -298,7 +317,7 @@ function tableFooter(){
   shop.appendChild(trEl)
 
   let totalelement = document.createElement('th');
-    totalelement.textContent = 'totalOfTotal';
+    totalelement.textContent = 'Total Of Total';
     trEl.appendChild(totalelement);
   
   for(var i = 0; i < hours.length; i++){
@@ -314,10 +333,10 @@ function tableFooter(){
   for (let j=0 ; j<all.length;j++){
 totalOfTotal +=all[j].total
 }
-
 let thEl = document.createElement('th');
     thEl.textContent = totalOfTotal;
     trEl.appendChild(thEl);
+
 
   }
 
@@ -332,8 +351,17 @@ let thEl = document.createElement('th');
   let Dubai = new cookie('Dubai', 11,	38,	3.7);
   let Paris = new cookie('Paris', 20,	38,	2.3);
   let Lima = new cookie('Lima', 2,	16,	4.6);
- 
+
+  function randomnum(min,max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);}
+
+    
+
+  
   tableHeader()
+
 
  seattle.getAge();
   console.log(seattle)
@@ -347,6 +375,7 @@ let thEl = document.createElement('th');
   console.log(Dubai)
  Dubai.render();
 
+ 
   Paris.getAge();
   console.log(Paris)
   Paris.render();
@@ -355,13 +384,15 @@ let thEl = document.createElement('th');
   console.log(Lima)
   Lima.render();
 
+  
+
  
-  tableFooter()
+  console.log(all)
+
  
  
- 
- 
-  function randomnum(min,max){
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);}
+  
+
+
+
+    
