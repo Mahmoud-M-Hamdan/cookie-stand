@@ -10,10 +10,37 @@ th,tr,td{border: solid black 3px;width: 40px;height: 35px;text-align: center;bac
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: cornflowerblue;
   }
   .salmon{ width: 100%;}
   img{    width: 30%;
-    height: 100px;}
-    iframe{width: 15%;}
-     body{background-color: rgb(225, 246, 247);}
+    height: 100px;
+    border: solid black 1px;}
+    iframe{width: 15%;
     
+    }
+     body{background-color: rgb(225, 246, 247);
+   }
+    li {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: coral;
+
+
+    }
+
+    h3{
+font-family: cursive;
+
+color: crimson;
+
+
+    }
+
+    fieldset{
+
+background-color: rgb(192, 205, 229);
+;
+
+
+    }

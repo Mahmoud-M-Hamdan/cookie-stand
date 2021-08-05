@@ -262,10 +262,14 @@ cookiesform.addEventListener('submit',submithandler)
 
      let newLoc= new cookie (locations,MinHour,MaxHour,AvgCookiesCustomer)
     
-    newLoc.getAge();
+
+    document.getElementById("shop").deleteRow(all.length)
+   
+     newLoc.getAge();
     newLoc.render();
     console.log(newLoc);
-    tableFooter()
+
+  tableFooter()
   }
   
 
@@ -313,12 +317,12 @@ hours.push('Daily Total');
 
 function tableFooter(){
 
-  let trEl = document.createElement('tr');
-  shop.appendChild(trEl)
+  let trE3 = document.createElement('tr');
+  shop.appendChild(trE3)
 
   let totalelement = document.createElement('th');
     totalelement.textContent = 'Total Of Total';
-    trEl.appendChild(totalelement);
+    trE3.appendChild(totalelement);
   
   for(var i = 0; i < hours.length; i++){
     let dailyTotal=0;
@@ -327,7 +331,7 @@ function tableFooter(){
   }
     let thEl = document.createElement('th');
     thEl.textContent = dailyTotal;
-    trEl.appendChild(thEl);
+    trE3.appendChild(thEl);
   }
   let totalOfTotal =0
   for (let j=0 ; j<all.length;j++){
@@ -335,8 +339,7 @@ totalOfTotal +=all[j].total
 }
 let thEl = document.createElement('th');
     thEl.textContent = totalOfTotal;
-    trEl.appendChild(thEl);
-
+    trE3.appendChild(thEl);
 
   }
 
@@ -359,38 +362,37 @@ let thEl = document.createElement('th');
 
     
 
-  
-  tableHeader()
+    
+   
+    
+   
+    tableHeader()
 
 
- seattle.getAge();
-  console.log(seattle)
- seattle.render();
+    seattle.getAge();
+     console.log(seattle)
+    seattle.render();
+   
+    Tokyo.getAge();
+    console.log(Tokyo)
+    Tokyo.render();
+    
+    Dubai.getAge();
+     console.log(Dubai)
+    Dubai.render();
+   
+    
+     Paris.getAge();
+     console.log(Paris)
+     Paris.render();
+   
+     Lima.getAge();
+     console.log(Lima)
+     Lima.render();
+   
+     tableFooter()
 
- Tokyo.getAge();
- console.log(Tokyo)
- Tokyo.render();
- 
- Dubai.getAge();
-  console.log(Dubai)
- Dubai.render();
 
- 
-  Paris.getAge();
-  console.log(Paris)
-  Paris.render();
-
-  Lima.getAge();
-  console.log(Lima)
-  Lima.render();
-
-  
-
- 
-  console.log(all)
-
- 
- 
   
 
 
